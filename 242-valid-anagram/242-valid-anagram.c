@@ -3,11 +3,13 @@
 bool isAnagram(char * s, char * t){
     int d[26] = {0};
     int i = 0;
-    while (s[i])
-        d[s[i++] - 'a']++;
-    i = 0;
-    while (t[i])
+    while (s[i] && t[i])
+    { 
+        d[s[i] - 'a']++;
         d[t[i++] - 'a']--;
+    }
+    if (s[i] || t[i])
+        return (false);
     i = 0;
     while (i < 26)
     {
