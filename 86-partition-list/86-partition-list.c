@@ -39,15 +39,7 @@ void fill_arrays(int *small, int *big, int size)
         i++;
     }
 }
-void from_array_to_list(struct ListNode *temp, int *array, int size, int *i)
-{
-    while (*i < size && array[*i] != -200)
-    {
-        temp->val = array[*i];
-        temp = temp->next;
-        *i = *i + 1;
-    }  
-}
+
 struct ListNode* partition(struct ListNode* head, int x){
     int i = 0;
     int size = get_size(head);
