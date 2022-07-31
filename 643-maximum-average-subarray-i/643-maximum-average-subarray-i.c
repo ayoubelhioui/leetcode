@@ -6,7 +6,6 @@ double findMaxAverage(int* nums, int numsSize, int k){
     int i = 0;
     while (i < k)
         sum += nums[i++];
-    sum = sum;
     result = sum;
     while (i < numsSize)
     {
