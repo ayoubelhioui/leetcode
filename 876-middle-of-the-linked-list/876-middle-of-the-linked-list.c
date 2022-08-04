@@ -18,14 +18,14 @@ int get_list_size(struct ListNode *head)
 }
 
 struct ListNode* middleNode(struct ListNode* head){
-    int middle = get_list_size(head);
-    if (middle % 2 == 0)
-        middle++;
-    middle = middle / 2 + 1;
+    int size = get_list_size(head);
+    // if (size % 2 == 0)
+    //     size++;
+    size = size / 2 + 1;
     while (head)
     {
-        middle--;
-        if (middle == 0)
+        size--;
+        if (size == 0)
            return (head);
         head = head->next;
     }
