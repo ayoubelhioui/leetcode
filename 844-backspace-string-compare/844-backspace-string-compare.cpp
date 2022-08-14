@@ -46,28 +46,6 @@ public:
         int s_length = s.length(), t_length = t.length();
         feelStack(s_st, s, s_length);
         feelStack(t_st, t, t_length);
-        string a, b;
-        int k = s_st.size(), x = t_st.size();
-        // for(int i = 0; i < k; i++)
-        // {
-        //     char c = s_st.top();
-        //     if (c != '#')
-        //     {
-        //         s_st.pop();
-        //         a.push_back(c);
-        //     }
-        // }
-        // for(int i = 0; i < x; i++)
-        // {
-        //     char c = t_st.top();
-        //     if (c != '#')
-        //     {
-        //         t_st.pop();
-        //         b.push_back(c);
-        //     }
-        // }
-        // if (a == b)
-        //     return (true);
         if (result(s_st, t_st))
             return (true);
         return (false);
