@@ -5,18 +5,12 @@ public:
         while (start <= end)
         {
             med = (start + end) / 2;
-            // printf("med is : %d\n", med);
             if (nums[med] > target)
                 end = med - 1;
             else if (nums[med] < target)
             {
                 if (med < size - 1 && nums[med + 1] > target)
-                {
-                    // printf("here\n");
-                    if (med == size - 1)
-                        return (med + 2);
                     return (med + 1);                    
-                }
                 else
                     start = med + 1;
             }
