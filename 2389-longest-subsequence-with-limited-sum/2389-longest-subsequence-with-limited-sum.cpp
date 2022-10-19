@@ -10,11 +10,9 @@ public:
             sum += nums[i];
             summingElements[i] = sum;
         }
-        for (int i = 0; i < queriesSize; i++)
-        {
+        for (int i = 0; i < queriesSize; i++){
             answer = 0;
-            for (int j = 0; j < numsSize; j++)
-            {
+            for (int j = 0; j < numsSize; j++){
                 if (queries[i] >= summingElements[j])
                     answer++;
                 else
