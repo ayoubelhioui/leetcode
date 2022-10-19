@@ -6,8 +6,10 @@ public:
             endIndex++;
     }
     
+    // void    
     string toGoatLatin(string sentence) {
         int counter = 1, sentenceLength = sentence.length() - 1,  i = 0;
+        unordered_set<char> vowels = {'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'};
         string newSentence;
         while (sentence[i])
         {
@@ -16,13 +18,13 @@ public:
                 int endIndex = 0;
                 if (i > 0)
                     i++;
-                if (sentence[i] == 'a' || sentence[i] == 'e' || sentence[i] == 'i' ||
-                sentence[i] == 'o' || sentence[i] == 'u' || sentence[i] == 'A' ||
-                sentence[i] == 'E' || sentence[i] == 'I' || sentence[i] == 'O' || sentence[i] == 'U')
+                // if (sentence[i] == 'a' || sentence[i] == 'e' || sentence[i] == 'i' ||
+                // sentence[i] == 'o' || sentence[i] == 'u' || sentence[i] == 'A' ||
+                // sentence[i] == 'E' || sentence[i] == 'I' || sentence[i] == 'O' || sentence[i] == 'U')
+                if(vowels.count(sentence[i]))
                 {
                     endIndex = i;
                     getWord(sentence, endIndex);
-                    // return (0);
                     newSentence += sentence.substr(i, endIndex - i);
                     newSentence += "ma";
                     for (int x = 0; x < counter; x++)
@@ -47,9 +49,7 @@ public:
             }
             i++;
         }
-        // std::cout <<"|"<< newSentence <<"|"<< std::endl;
         newSentence.erase(newSentence.size() - 1, 1);
-        // std::cout <<"|"<< newSentence <<"|"<< std::endl;
         return (newSentence);
     }
 };
