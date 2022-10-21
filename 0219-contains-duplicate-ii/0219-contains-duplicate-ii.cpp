@@ -9,11 +9,7 @@ public:
             if (it != m.end())
             {
                 if (abs(i - it->second) <= k)
-                {
-                    printf("i is : %d, and j is : %d\n", i, it->second);
                     return (true);
-                }
-                    
             }
             m[nums[i]] = i;
         }
