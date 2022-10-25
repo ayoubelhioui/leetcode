@@ -5,18 +5,10 @@ public:
         string s2 = "";
         int length1 = word1.size();
         int length2 = word2.size();
-        for (int i = 0; i < length1; i++)
-        {
-            int j = 0;
-            while (word1[i][j])
-                s1 += word1[i][j++];
-        }
-        for (int i = 0; i < length2; i++)
-        {
-            int j = 0;
-            while (word2[i][j])
-                s2 += word2[i][j++];
-        }
+        for (auto i : word1)
+            s1+=i;
+        for (auto i : word2)
+            s2+=i;
         return (s1 == s2);
     }
 };
