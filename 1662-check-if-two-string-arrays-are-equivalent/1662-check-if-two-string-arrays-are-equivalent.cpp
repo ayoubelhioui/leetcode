@@ -3,8 +3,6 @@ public:
     bool arrayStringsAreEqual(vector<string>& word1, vector<string>& word2) {
         string s1 = "";
         string s2 = "";
-        int length1 = word1.size();
-        int length2 = word2.size();
         for (auto i : word1)
             s1+=i;
         for (auto i : word2)
