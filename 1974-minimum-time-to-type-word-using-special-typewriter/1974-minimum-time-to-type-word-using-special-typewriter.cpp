@@ -7,7 +7,6 @@ public:
         for (int i = 0; i < wordLength - 1; i++)
         {
             value = abs(word[i + 1] - word[i]);
-            // printf("the value is : %d\n", value);
             if (value <= 13)
                 total += value;
             else
