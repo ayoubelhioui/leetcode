@@ -11,8 +11,6 @@ public:
         for (int i = 0; i < 26; i++)
             if (upper[i] == 1 && lower[i] == 1)
                 m = max(m, i + 'A');
-        if (m != 0)
-            return (returnedString += m);
-    return ("");
+    return (m != 0 ? returnedString += m : "");
 }
 };
