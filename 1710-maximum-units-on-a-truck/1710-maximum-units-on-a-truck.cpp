@@ -22,12 +22,6 @@ public:
             pq.pop();
             pqSize--;
         }
-        // while (pq.size() > 0)
-        // {
-        //     auto i = pq.top();
-        //     printf("the first is : %d, and the second is : %d\n", i.first, i.second);
-        //     pq.pop();
-        // }
         return (result);
     }
 };
