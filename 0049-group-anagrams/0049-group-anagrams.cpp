@@ -3,12 +3,9 @@ public:
       vector<vector<string>> groupAnagrams(vector<string>& strs) {
         int strsSize = strs.size();
         vector<vector<string>> vec;
-        //map<int, map<char, int>> m;
         int m[strsSize][26];
         int vis[strsSize];
-         
-         memset(vis, 0, sizeof(int) * strsSize);
-        //vector<pair<string, int>> newString(strsSize);
+        memset(vis, 0, sizeof(int) * strsSize);
         for (int i = 0; i < strsSize; i++)
         {
             memset(m[i], 0, sizeof(int) * 26);
