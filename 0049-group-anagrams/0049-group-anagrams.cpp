@@ -5,28 +5,30 @@ public:
         vector<vector<string>> vec;
         //map<int, map<char, int>> m;
         int m[strsSize][26];
-        vector<pair<string, int>> newString(strsSize);
+        int vis[strsSize];
+         
+         memset(vis, 0, sizeof(int) * strsSize);
+        //vector<pair<string, int>> newString(strsSize);
         for (int i = 0; i < strsSize; i++)
         {
             memset(m[i], 0, sizeof(int) * 26);
-            newString[i] = {strs[i], 0};
-            for (int j = 0; j < newString[i].first.length(); j++)
-                m[i][newString[i].first[j] - 'a']++;
+            for (int j = 0; j < strs[i].length(); j++)
+                m[i][strs[i][j] - 'a']++;
         }
-        for (int i = 0; i < newString.size(); i++)
+        for (int i = 0; i < strs.size(); i++)
         {
-            if (newString[i].second == 1)
+            if (vis[i] == 1)
                 continue;
             vector<string> v;
-            v.push_back(newString[i].first);
-            for (int j = i + 1; j < newString.size(); j++)
+            v.push_back(strs[i]);
+            for (int j = i + 1; j < strs.size(); j++)
             {
-                if ((newString[i].first.length() == newString[j].first.length()))
+                if ((strs[i].length() == strs[j].length()))
                 {
                     if (!memcmp(m[i], m[j], sizeof(int) * 26))
                     {
-                        v.push_back(newString[j].first);
-                        newString[j].second = 1;
+                        v.push_back(strs[j]);
+                        vis[j] = 1;
                     }
                 }
             }
