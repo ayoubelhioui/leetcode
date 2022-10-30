@@ -8,9 +8,7 @@ public:
         for (auto character : s)
         {
             if (character == VERTICAL_BAR)
-            {
                 (flag == 0) ? flag = 1 : flag = 0;
-            }
             else if (character == ASTERISK && flag == 0)
                 asteriskCounter++;
         }
