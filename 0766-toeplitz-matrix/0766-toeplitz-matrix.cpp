@@ -4,7 +4,6 @@ public:
     {
         if (i == matrixSize || j == matrix[i].size() || matrix[i][j] == -1)
             return (true);
-        printf("it is : %d, and the value is : %d\n", matrix[i][j], value);
         if (matrix[i][j] != value)
             return (false);
         if (!DFS(matrix, i + 1, j + 1, matrixSize, matrix[i][j]))
