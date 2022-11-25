@@ -5,9 +5,7 @@ public:
         sort(nums.begin(), nums.end());
         while (start <= end)
         {
-            med = (start + end) / 2;
-            if (med == numsSize - 1 and med == nums[med])
-                return (med + 1);
+            med = (start + end) >> 1;
             if (nums[med] == med)
                 start = med + 1;
             else if (nums[med] != med)
