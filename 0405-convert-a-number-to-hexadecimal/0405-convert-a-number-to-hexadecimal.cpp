@@ -1,17 +1,15 @@
 class Solution {
 public:
-    void hexIt(unsigned int num, string &a, string &result)
-    {
-        if (num == 0)
-            return ;
-            
-        hexIt(num / 16, a, result);
-        result += a[num % 16];
-    }
-    string toHex(int num) {
-        string result;
+    string toHex(int n) {
+
+        string result;        
         string a = "0123456789abcdef";
-        hexIt(num, a, result);
-        return (result != "" ? result : "0");
+        unsigned int num = n;
+        do
+        {
+            result += a[num % 16];
+            num >>= 4;
+        } while (num);
+        return {result.rbegin(), result.rend()};
     }
 };
