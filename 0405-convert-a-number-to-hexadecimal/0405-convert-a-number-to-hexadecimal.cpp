@@ -1,9 +1,8 @@
 class Solution {
 public:
     string toHex(int n) {
-
-        string result;        
-        string a = "0123456789abcdef";
+        string result;
+        char a[] = "0123456789abcdef";
         unsigned int num = n;
         do
         {
