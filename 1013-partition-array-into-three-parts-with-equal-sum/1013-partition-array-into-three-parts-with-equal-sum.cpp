@@ -15,6 +15,6 @@ public:
                 newSum = 0;
             }
         }
-        return (count < 3 ? false : true);
+        return (count >= 3);
     }
 };
