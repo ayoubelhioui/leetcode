@@ -6,11 +6,8 @@ public:
         for (auto i : arr)
             m[i]++;
         for (auto i : m)
-        {
-            auto it = se.insert(i.second);
-            if (!it.second)
+            if (!se.insert(i.second).second)
                 return (false);
-        }
         return (true);
     }
 };
