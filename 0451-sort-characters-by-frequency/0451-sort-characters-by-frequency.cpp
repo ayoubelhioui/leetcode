@@ -1,8 +1,7 @@
 class Solution {
 public:
     string frequencySort(string s) {
-        int frequency[127] = {0};
-        string result;
+        int frequency[127] = {0}, index = 0;
         priority_queue<pair<int, char>> pq;
         for (auto i : s)
             frequency[i]++;
@@ -13,9 +12,9 @@ public:
         {
             pair<int, char> p = pq.top();
             while (p.first-- > 0)
-                result += p.second;
+                s[index++] = p.second;
             pq.pop();
         }
-        return (result);
+        return (s);
     }
 };
