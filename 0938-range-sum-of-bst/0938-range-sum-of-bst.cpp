@@ -14,8 +14,7 @@ public:
     void DFS(TreeNode *root, int &low, int &high, int &sum){
         if (!root)
             return ;
-        if (root->val >= low and root->val <= high)
-            sum += root->val;
+        sum += (root->val >= low and root->val <= high) * root->val;
         DFS(root->left, low, high, sum);
         DFS(root->right, low, high, sum);
     }
