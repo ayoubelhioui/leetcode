@@ -5,9 +5,6 @@ class Solution(object):
             if value in my_map:
                 if (abs(index - my_map[value]) <= k):
                     return (True);
-                else:
-                    my_map[value] = index;
-            else:
-                my_map[value] = index;
+            my_map[value] = index;
         return (False);
             
