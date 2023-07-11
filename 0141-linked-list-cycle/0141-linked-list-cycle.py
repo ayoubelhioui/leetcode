@@ -6,11 +6,11 @@
 
 class Solution(object):
     def hasCycle(self, head):
-        slowPointer, fastPointer = head, head;
-        while fastPointer is not None and fastPointer.next is not None:
-            slowPointer = slowPointer.next;
-            fastPointer = fastPointer.next.next;
-            if (slowPointer == fastPointer):
+        hashMap = [];
+        while head:
+            if (head in hashMap):
                 return (True);
+            hashMap.append(head);
+            head = head.next;
         return (False);
         
